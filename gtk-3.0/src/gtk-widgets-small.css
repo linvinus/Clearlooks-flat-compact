@@ -1,0 +1,810 @@
+/******************************
+ *  Small size Theme for Gtk3
+ *  by Denis Konstantinov
+ *  linvinus@gmail.com
+ ******************************/
+
+/*restore borders*/
+.button,
+.button:hover,
+.button:active,
+.button:insensitive,
+.entry,
+.frame,
+.view,
+.notebook,
+.notebook tab.top,
+.notebook tab.bottom,
+.notebook tab.left,
+.notebook tab.right,
+.sidebar .view,
+.view.rubberband,
+.rubberband,
+.floating-bar,
+.trough,
+.trough row,
+.trough row:hover,
+.trough row:selected,
+.trough row:selected:focus,
+.pane-separator, 
+.separator,
+.primary-toolbar GtkSeparatorToolItem,
+.primary-toolbar .separator,
+.primary-toolbar .separator:insensitive,
+GtkSwitch,
+GtkSwitch.slider,
+GtkStatusbar
+{
+	border-width: 1px;
+	border-color: shade(@theme_bg_color, 0.57);
+}
+ 
+.button,
+.button.default {
+	border-width: 1px;
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
+    padding: 1px;
+}
+.entry  {
+	border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    padding: 2px 2px 2px 2px;
+    margin:0;
+}
+
+ /******************
+ * combobox entry *
+ ******************/
+
+GtkComboBox *,
+GtkComboBox
+GtkComboBoxText *,
+GtkComboBoxText
+{
+	padding: 0px;
+	border-width: 0;
+}
+
+GtkComboBox,
+GtkComboBox *,
+GtkComboBoxText *,
+GtkComboBoxText .button,
+GtkComboBoxText .button:hover,
+GtkComboBoxText .button:insensitive
+{
+    background-clip: padding-box;
+    background-origin: border-box;
+
+    border-width: 1px;
+    padding: 0;
+    margin:0;
+}
+
+
+.notebook {
+    border-radius: 3px;
+    padding: 1px;
+    margin:0px;
+    border-width: 1px;
+  -GtkNotebook-show-border:1;
+  -GtkNotebook-gtk-button-images: 0;
+  -GtkNotebook-gtk-menu-images: 0;
+  -GtkNotebook-arrow-spacing: 0;
+  -GtkNotebook-tab-curvature :0;
+}
+
+
+.notebook tab.top:active {
+	-GtkWidget-focus-line-width : 0px;
+    padding: 2px 2px 0px 2px;
+	background-image: linear-gradient(to bottom,
+	                  @selected_bg_color 1px,
+	                  @selected_bg_color 3px,
+	                  shade(@selected_bg_color,0.5) 1px,
+	                  shade(@theme_bg_color, 1.05) 1px,
+	                  shade(@theme_bg_color, 1.05) 100%);
+    margin:0;
+    border-width: 1px 1px 0px 1px;
+    background-color: shade(@theme_bg_color, 1.05);
+
+    
+}
+
+.notebook tab.top {
+	padding: 2px 2px 0px 2px;
+	-GtkWidget-focus-line-width : 0px;
+    margin:0;
+    border-width: 1px 1px 0 1px;
+}
+
+.notebook tab.right:active {
+    padding: 2px 3px 2px 0px;
+    border-width: 1px 1px 1px 0;
+	background-image: linear-gradient(to left,
+				  @selected_bg_color 1px,
+				  @selected_bg_color 3px,
+				  shade(@selected_bg_color,0.5) 1px,
+				  shade(@theme_bg_color, 1.05) 1px,
+				  shade(@theme_bg_color, 1.05) 100%);   
+}
+
+.notebook tab.right {
+    padding: 2px 3px 2px 0px;
+    border-width: 1px 1px 1px 0;
+}
+
+.notebook tab.bottom:active {
+    padding: 0px 2px 2px 2px;
+    border-width: 0 1px 1px 1px;
+	background-image: linear-gradient(to top,
+				  @selected_bg_color 1px,
+				  @selected_bg_color 3px,
+				  shade(@selected_bg_color,0.5) 1px,
+				  shade(@theme_bg_color, 1.05) 1px,
+				  shade(@theme_bg_color, 1.05) 100%);
+}
+
+.notebook tab.bottom {
+    padding: 0px 2px 2px 2px;
+    border-width: 0 1px 1px 1px;
+}
+
+.notebook tab.left:active {
+    padding: 2px 0px 2px 3px;
+    border-width: 1px 0 1px 1px;
+	background-image: linear-gradient(to right,
+				  @selected_bg_color 1px,
+				  @selected_bg_color 3px,
+				  shade(@selected_bg_color,0.5) 1px,
+				  shade(@theme_bg_color, 1.05) 1px,
+				  shade(@theme_bg_color, 1.05) 100%);
+}
+
+.notebook tab.left {
+    padding: 2px 0px 2px 3px;
+    border-width: 1px 0 1px 1px;
+}
+
+.notebook tab .button {
+    padding: 0;
+}
+
+.notebook tab{
+	background-color: shade(@theme_bg_color, 0.9);
+}
+.notebook:active{
+	background-color: shade(@theme_bg_color, 1.05);
+	border-color:transparent;
+}
+
+.check,
+.radio,
+.check:insensitive,
+.radio:insensitive {
+	border-width: 1px;
+    background-color: @theme_base_color;
+    border-style: solid;
+    border-color: shade(@theme_selected_bg_color, 0.8);
+}
+
+.cell *,
+.cell {
+    border-width: 0;
+    padding: 0;
+}
+
+row*,
+row,
+row:focus,
+row:selected,
+row:selected:focus {
+    border-width: 0;
+    padding: 0;
+}
+
+.grip {
+	border-width: 1px;
+    background-color: @theme_selected_bg_color;
+}
+
+.scrollbar.slider,
+.scrollbar.button,
+.scrollbar.slider.vertical,
+.scrollbar.button.vertical {
+    background-image: -gtk-gradient(linear, left top, right top,
+                                     from (shade(shade(@theme_selected_bg_color, 0.9), 1.2)),
+                                     to (shade(shade(@theme_selected_bg_color, 0.9), 1.15)));
+
+    border-width: 1px;
+    border-color: shade(@theme_bg_color, 0.7);
+    border-radius: 10px;
+    color: shade(@theme_selected_bg_color, 0.6);
+}
+
+.scrollbar.slider.horizontal,
+.scrollbar.button.horizontal {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color, 0.9), 1.2)),
+                                     to (shade(shade(@theme_selected_bg_color, 0.9), 1.15)));
+
+    border-width: 1px;
+    border-color: shade(@theme_selected_bg_color, 0.7);
+    border-radius: 10px;
+}
+
+.scrollbar.slider:hover,
+.scrollbar.slider.vertical:hover {
+    background-image: -gtk-gradient(linear, left top, right top,
+                                     from (shade(shade(@theme_selected_bg_color, 0.8), 1.2)),
+                                     to (shade(shade(@theme_selected_bg_color, 0.8), 1.15)));
+}
+
+.scrollbar.slider.horizontal:hover {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color, 0.8), 1.2)),
+                                     to (shade(shade(@theme_selected_bg_color, 0.8), 1.15)));
+}
+
+/*
+.view {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    border-radius: 0;
+    padding: 0;
+    border-width: 0;
+}
+*/
+
+
+
+/*
+GtkTreeView,
+GtkCTree,
+GtkList,
+GtkCList{
+    border-width: 1px 1px 1px 1px;
+    padding: 1px;
+    -GtkTreeView-grid-line-width:0;
+    -GtkTreeView-tree-line-width:0;
+    background-color: #FF0000;
+}
+*/
+GtkTreeView *,
+GtkCTree *,
+GtkList *,
+GtkCList *{
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar,
+.sidebar .view {
+	background-color: @theme_base_color;
+}
+
+
+/*GtkIconView**/
+/*GtkTreeView → row, column, column-header
+ * even, odd, first, last, sorted*/
+/*white background*/
+GtkFileChooserDialog GtkTreeView
+{
+	border-width: 1px;
+/*
+	background-color: @theme_base_color;
+*/
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (@theme_base_color),
+                                     to (@theme_base_color));
+    -GtkWidget-separator-height: 1;
+    -GtkWidget-separator-width: 1;
+}
+
+GtkFileChooserDialog GtkTreeView row:nth-child(even) {
+	background-image:none;
+}
+
+GtkFileChooserDialog GtkTreeView row:nth-child(odd) {
+    background-image:none;
+    background-color: @theme_base_color;
+}
+
+GtkTreeView row:nth-child(even) {
+    background-color: shade(@theme_base_color, 0.97);
+}
+
+
+GtkTreeView .button,
+GtkCTree .button,
+GtkList .button,
+GtkCList .button,
+GtkTreeView.button{
+/*
+    border-width: 1px 1px 1px 0;
+*/
+	border-width: 1px;
+    padding: 0;
+}
+
+
+
+column-header .button,
+column-header .button:focus,
+column-header .button:hover:focus,
+column-header .button:active:focus  {
+	border-width: 0px 1px 1px 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.09)),
+                                     to (shade(@theme_bg_color, 0.90)));
+
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+column-header .button:hover,
+column-header .button:active {
+	border-width: 0px 1px 1px 0;
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 1.12)),
+                                     to (shade(@theme_bg_color, 0.93)));
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+.image{
+    border-width: 0;
+    padding: 0;
+}
+.scrollbars-junction{
+	background-color: @theme_base_color;
+    background-image: none;
+	border-width: 0px;
+}
+
+
+
+.spinbutton.button {
+	border-color: shade(@theme_bg_color, 0.57);
+}
+/*GtkTreeView border */
+GtkScrolledWindow.frame,
+GtkViewport.frame
+{
+	border-color: shade(@theme_bg_color, 0.57);
+	border-width: 1px;
+}
+
+.button:focus,
+.entry:focus{
+	border-color: shade(@theme_bg_color, 0.37);
+}
+
+.toolbar,
+.primary-toolbar,
+.primary-toolbar .toolbar,
+.primary-toolbar.toolbar,
+.inline-toolbar.toolbar .button,
+.inline-toolbar.toolbar GtkToolButton .button
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+.menuitem.check,
+.menuitem .check,
+.menuitem.check:active,
+.menuitem .check:active,
+.menuitem.check:hover,
+.menuitem .check:hover,
+.menuitem.check:selected,
+.menuitem .check:selected,
+.menuitem.check:insensitive,
+.menuitem .check:insensitive,
+.menuitem.radio,
+.menuitem .radio,
+.menuitem.radio:active, 
+.menuitem .radio:active, 
+.menuitem.radio:hover,
+.menuitem .radio:hover,
+.menuitem.radio:selected,
+.menuitem .radio:selected,
+.menuitem.radio:insensitive,
+.menuitem .radio:insensitive,
+GtkTreeView.check,
+GtkTreeView .check,
+GtkTreeView.check:active,
+GtkTreeView .check:active,
+GtkTreeView.check:active:hover,
+GtkTreeView .check:active:hover,
+GtkTreeView.check:hover,
+GtkTreeView .check:hover,
+GtkTreeView.check:focus,
+GtkTreeView .check:focus,
+GtkTreeView.check:selected:focus,
+GtkTreeView .check:selected:focus,
+GtkTreeView.check:selected,
+GtkTreeView .check:selected,
+GtkTreeView.radio,
+GtkTreeView .radio,
+GtkTreeView.radio:active,
+GtkTreeView .radio:active,
+GtkTreeView.radio:active:hover,
+GtkTreeView .radio:active:hover,
+GtkTreeView.radio:hover,
+GtkTreeView .radio:hover,
+GtkTreeView.radio:focus,
+GtkTreeView .radio:focus,
+GtkTreeView.radio:selected:focus,
+GtkTreeView .radio:selected:focus,
+GtkTreeView.radio:selected,
+GtkTreeView .radio:selected 
+{
+	background-image:none;
+	color: @fg_color;
+	border-color: 	shade(@theme_bg_color, 0.57);
+	background-color: @theme_base_color;
+	border-style: solid;
+	border-width: 1px;
+}
+
+GtkTreeMenu.menu,
+GtkMenuToolButton.menu,
+GtkComboBox .menu,
+.primary-toolbar .button .menu,
+.toolbar .menu,
+.toolbar .primary-toolbar .menu,
+.menu,
+.menu.button:hover,
+.menu.button:active,
+.menu.button:active:insensitive,
+.menu.button:insensitive,
+.menu.button {
+	background-image:none;
+	background-color: shade (@bg_color,1.08);
+}
+
+.toolbar {
+    border-color: shade(@theme_bg_color, 0.7);
+    border-style: solid;
+    border-width: 0 0 1px 0;
+}
+
+
+
+.scrollbar.trough.vertical{
+	border-color: shade(@theme_bg_color, 0.57);
+	border-radius: 0px 0px 0 0;
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+
+}
+.scrollbar.trough.horizontal{
+	border-color: shade(@theme_bg_color, 0.57);
+	border-radius: 0px 0 0 0px;
+	border-width: 1px 0 1px 0;
+	border-style: solid;
+}
+.scrollbars-junction{
+	background-color: @theme_base_color;
+    background-image: none;
+	border-color: shade(@theme_bg_color, 0.57);
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+
+}
+
+/***************************applications*******************************/
+
+/*GtkPathBar in GtkFileChooserDialog*/
+/* middle button */
+.linked .entry,
+.linked .button,
+.linked .button:active,
+.linked .button:active:hover,
+.linked .button:insensitive,
+.primary-toolbar .linked .entry,
+.primary-toolbar .linked .button,
+.primary-toolbar .linked .button:active,
+.primary-toolbar .linked .button:active:hover,
+.primary-toolbar .linked .button:insensitive {
+    border-width: 1px;
+    border-right-width: 0;
+    border-radius: 0;
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+/* leftmost button */
+.linked .entry:first-child,
+.linked .button:first-child,
+.linked .button:active:first-child,
+.linked .button:active:hover:first-child,
+.linked .button:insensitive:first-child,
+.primary-toolbar .linked .entry:first-child,
+.primary-toolbar .linked .button:first-child,
+.primary-toolbar .linked .button:active:first-child,
+.primary-toolbar .linked .button:active:hover:first-child,
+.primary-toolbar .linked .button:insensitive:first-child {
+    border-width: 1px;
+    border-right-width: 0;
+    border-radius: 3px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+/* rightmost button */
+.linked .entry:last-child,
+.linked .button:last-child,
+.linked .button:active:last-child,
+.linked .button:active:hover:last-child,
+.linked .button:insensitive:last-child,
+.primary-toolbar .linked .entry:last-child,
+.primary-toolbar .linked .button:last-child,
+.primary-toolbar .linked .button:active:last-child,
+.primary-toolbar .linked .button:active:hover:last-child,
+.primary-toolbar .linked .button:insensitive:last-child {
+    border-width: 1px;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+/* linked single button */
+.linked .entry:only-child,
+.linked .button:only-child,
+.linked .button:active:only-child,
+.linked .button:active:hover:only-child,
+.linked .button:insensitive:only-child,
+.primary-toolbar .linked .entry:only-child,
+.primary-toolbar .linked .button:only-child,
+.primary-toolbar .linked .button:active:only-child,
+.primary-toolbar .linked .button:active:hover:only-child,
+.primary-toolbar .linked .button:insensitive:only-child {
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: shade(@theme_bg_color, 0.57);
+}
+
+/*evolution message list*/
+EMailReader MessageList ECanvas{
+    color: #000000;
+    background-color: @theme_base_color;
+}
+/* Black on white for HTML messages in Evolution Reader/Composer */
+/*evolution 3.6*/
+WebKitWebView {
+    color: #000000;
+    background-color: @theme_base_color;
+}
+/*evolution 3.4*/
+EMsgComposer GtkHTML {
+    color: #000000;
+    background-color:@theme_base_color;
+}
+/* Properly select text in HTML message */
+EMailView GtkHTML:selected {
+    color: @selcted_fg_color;
+    background-color: @selected_bg_color;
+}
+
+EMsgComposer GtkHTML:selected {
+    color: @selected_fg_color;
+    background-color: @selected_bg_color;
+}
+
+/* Highlight selected message in message list when list is unfocused */
+EMailReader MessageList ECanvas:active {
+    color: @selected_fg_color;
+    background-color: @selected_bg_color;
+}
+
+
+/*nautilus,remmina*/
+GtkStatusbar{	
+	-GtkStatusbar-shadow-type: in;
+}
+
+GtkStatusbar >.frame{
+	
+	border-width: 1px;
+	border-radius: 0;
+	border-color: 	shade(@theme_bg_color, 0.57);
+}
+
+/*Gnome3 fallback panel*/
+.gnome-panel-menu-bar,
+PanelApplet > GtkMenuBar.menubar,
+/*
+PanelToplevel,
+*/
+/*
+PanelWidget,
+* WnckTasklist
+*/
+PanelAppletFrame,
+PanelApplet
+{
+	/*top background-color not used*/
+	background-color: @theme_bg_color;
+/*
+	background-image: linear-gradient(to bottom,
+	                  @selected_bg_color 1px,
+	                  @selected_bg_color 1px,
+	                  shade(@selected_bg_color,0.5) 2px,
+	                  shade(@theme_bg_color, 1.00) 2px,
+	                  shade(@theme_bg_color, 1.00) 95%,
+	                  shade(@theme_bg_color, 1.00));   
+*/
+	/*border on bottom panel*/
+	 background-image: -gtk-gradient (linear, 0.0 0.0, 0.0 0.05,
+                                   from (shade(@theme_bg_color, 0.57)),
+                                   to (@bg_color));
+	-PanelMenuBar-icon-visible: true;
+}
+
+PanelWidget{
+	/*https://bugzilla.gnome.org/show_bug.cgi?id=663397*/
+	/*top border on bottom panel*/
+    background-image: -gtk-gradient (linear, 0.0 0.0, 0.0 0.05,
+                                   from (shade(@theme_bg_color, 0.57)),
+                                   to (@bg_color));
+}
+ /*dots*/
+PanelAppletFrame{
+	background-color: shade(@theme_bg_color, 0.57);
+}
+
+PanelApplet .button,
+WnckTasklist .button,
+WnckTasklist{
+	background-color: transparent;
+	background-image:none;
+/*
+	border-width: 0 0 1px 1px;
+	border-radius: 0;
+	padding: 5px;
+*/
+}
+
+/*
+.cell.baobab-level-cell.fill-block,
+.cell.baobab-level-cell.fill-block:selected,
+.cell.baobab-level-cell.fill-block:selected:hover {
+    background-color: #edd400;
+}
+
+.cell.baobab-level-cell.fill-block.level-low,
+.cell.baobab-level-cell.fill-block.level-low:hover {
+    background-color: #73d216;
+}
+
+.cell.baobab-level-cell.fill-block.level-high,
+.cell.baobab-level-cell.fill-block.level-high:hover {
+    background-color: #cc0000;
+}
+
+.cell.baobab-level-cell.fill-block:backdrop,
+.cell.baobab-level-cell.fill-block:hover:backdrop,
+.cell.baobab-level-cell.fill-block.level-low:backdrop,
+.cell.baobab-level-cell.fill-block.level-high:backdrop {
+    background-color: @theme_unfocused_text_color;
+}
+
+ .cell.baobab-cell-error {
+     color: @error_color;
+}
+*/
+NautilusWindow GtkScrolledWindow .frame, 
+NautilusWindow .sidebar .frame {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.57);
+    border-radius: 0;
+}
+NautilusWindow * {
+    -GtkPaned-handle-size: 5;
+}
+
+/* ugly but works for gnome-control-center
+   see https://bugzilla.gnome.org/show_bug.cgi?id=591085
+*/
+GtkWindow>GtkVBox>GtkNotebook>GtkScrolledWindow>GtkViewport
+{
+	background-color: @theme_base_color;
+}
+
+/**********************************************************************/
+
+.dock{
+	padding: 1px;
+	border-width: 1px;
+	background-color: shade(@theme_bg_color, 0.90);
+}
+
+
+
+/*.content-view baobab main window bg*/
+/*EggListBox,
+GtkTreeView .frame
+* GtkViewport,
+*/
+/*
+GtkGrid,
+*/
+/*
+GtkBox,
+* GtkAspectFrame
+GtkScrolledWindow,
+*/
+
+GtkScrolledWindow.frame
+{
+/*
+	background-color: #FF0F00;
+*/
+	background-color:shade(@theme_bg_color, 0.57);
+/*
+	color: #FFF000;
+*/
+/*
+	border-color: #00FF00;
+*/
+	border-width: 1px;
+	padding: 1px;
+	margin: 1px;
+	border-style: solid;
+/*
+	-GtkScrolledWindow-scrollbar-spacing:1;
+*/
+	
+}
+/* avoid double borders when a viewport is
+ * packed into a GtkScrolledWindow */
+/*
+ * disabled for gnome-calculator
+GtkScrolledWindow GtkViewport.frame {
+    border-style: none;
+}
+*/
+/*
+GtkTreeView,
+GtkTreeView.frame{
+padding: 3px;
+margin: 3px;
+-GtkTreeView-spacing:3;
+}
+*/
+
+
+/*Chart,
+GtkNotebook*/
+/*
+BaobabRingschart
+{
+	background-color: @theme_base_color;
+	border-color: #00FF00;
+	border-width: 1px;
+	padding: 1px;
+	border-style: solid;
+}
+*/
+
+/*
+GtkNotebook,
+GtkVBox,
+GtkHBox,
+GtkBox,
+GtkScrolledWindow,
+GtkScrolledWindow.frame,
+GtkGrid{
+	margin: 1px;
+	padding: 1px;
+	border-width: 1px;	
+	border-color: shade(@theme_bg_color, 0.57);
+    border-style: solid;
+}
+*/
+
+

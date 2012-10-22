@@ -1,0 +1,525 @@
+gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-menu=12,12:gtk-small-toolbar=16,16:gtk-large-toolbar=16,16:gtk-button=16,16:gtk-dialog=16,16:gtk-dnd=16,16"                                                                                                                                                            
+gtk-toolbar-icon-size = GTK_ICON_SIZE_SMALL_TOOLBAR
+
+#gtk_color_scheme = "fg_color:#000\nbg_color:#ede9e3\nbase_color:#fff\ntext_color:#000\nselected_bg_color:#5598d7\nselected_fg_color:#fff"
+gtk_color_scheme = "fg_color:#000\nbg_color:#E4DACB\nbase_color:#F7F3ED\ntext_color:#000\nselected_bg_color:#707070\nselected_fg_color:#fff\ntooltip_bg_color:#707070\ntooltip_fg_color:#fcfcfc"
+
+style "clearlooks-default"
+{
+  GtkScrolledWindow::scrollbar-spacing=0
+  GtkContainer::border_width=0
+  GtkButton::default_border    = { 0, 0, 0, 0 }
+  GtkButton::interior-focus = 0
+  GtkButton::focus-padding = 0
+  GtkButton::focus-line-width = 0
+  GtkButton::focus-line-height = 0
+  GtkButton::inner-border      = {1, 1, 1, 1}
+  
+  GtkRange       ::trough_border     = 0
+  GtkPaned       ::handle_size       = 3
+  GtkRange	::trough_border     	= 0
+
+#  GtkRange       ::slider_width      = 15
+#  GtkRange       ::stepper_size      = 15
+  GtkRange       ::slider_width      = 13  #more compact but needs patch
+  GtkRange       ::stepper_size      = 13 #more compact but needs patch
+
+  GtkOptionMenu::indicator_spacing = { 2, 2, 4, 4 }
+  GtkOptionMenu::indicator_size = { 12, 10 }
+  
+  GtkMenu::vertical_padding = 0
+  GtkMenu::horizontal_padding = 0
+  
+  GtkEntry	 ::inner-border	     = { 0, 0, 0, 0 }
+
+  GtkNotebook::tab-border = 0
+  GtkNotebook::tab-hborder = 0
+  GtkNotebook::tab-vborder = 0
+  GtkNotebook::show-border = 0
+  GtkNotebook::gtk-button-images = 0
+  GtkNotebook::gtk-menu-images = 0
+  GtkNotebook::arrow-spacing = 0
+  GtkNotebook::tab-curvature = 0
+  GtkNotebook::tab-overlap = 0
+  GtkNotebook::focus-line-width = 0
+  
+  
+  GtkScrollbar   ::min_slider_length = 30
+  GtkMenuBar     ::internal-padding  = 0
+  GtkMenuBar::shadow_type = GTK_SHADOW_NONE
+#  GtkTreeView    ::expander_size     = 14
+  GtkExpander    ::expander_size     = 12
+  GtkScale       ::slider-length     = 27
+#  GtkToolbar     ::button-relief     = GTK_RELIEF_NORMAL
+   GtkToolbar::shadow_type = GTK_SHADOW_NONE
+#  GtkMenuBar     ::shadow-type       = GTK_SHADOW_OUT
+#  GtkScrollbar   ::has-secondary-forward-stepper = 1
+#  GtkScrollbar   ::has-secondary-backward-stepper = 1
+    GtkComboBox::appears-as-list = 0
+#    GtkComboBox::arrow-size = 5
+    
+  GtkButton      ::child-displacement-x = 0
+  GtkButton      ::child-displacement-y = 0
+
+  WnckTasklist   ::fade-overlay-rect = 0
+
+  GtkTreeView::expander-size = 9                                                                                                                           
+  GtkTreeView::expander-indent = 0                                                                                                                         
+  GtkTreeView::horizontal-separator = 0                                                                                                                    
+  GtkTreeView::focus-line-width = 0
+  GtkTreeView::spacing = 0
+  GtkTreeView::vertical-separator = 0                                                                                                                      
+  GtkTreeView::row-ending-details = 0
+  GtkTreeView::treeview-left=1
+  GtkTreeView::treeview-right=0                                                                                                                      
+  GtkTreeView::treeview-middle=0
+  GtkTreeView::passive_focus = 0                                                                                                                           
+  GtkTreeView::separator-height = 0                                                                                                                        
+  GtkTreeView::tree-line-pattern = "\001\001"
+  GtkTreeView::grid-line-pattern = "\001\001"
+  GtkTreeView::grid-line-width = 0
+  GtkTreeView::tree-line-width = 0                                                                                                                        
+
+  GtkButtonBox::child-min-height=18
+  GtkButtonBox::child-min-width=18
+  GtkButtonBox::child-internal-pad-x=0
+  GtkButtonBox::child-internal-pad-y=0
+  
+  GtkCheckButton::indicator-spacing=1
+  GtkCheckButton::indicator-size=13
+  GtkRadioButton::indicator-spacing=1
+  GtkCheckMenuItem::indicator-size=13
+  xthickness = 1
+  ythickness = 1
+
+
+  fg[NORMAL]        = @fg_color #"#000000" # black
+  fg[PRELIGHT]      = @fg_color #"#000000" # black
+  fg[SELECTED]      = @selected_fg_color #"#ffffff" # white 
+  fg[ACTIVE]        = @fg_color #"#000000" # black
+  fg[INSENSITIVE]   = darker (@bg_color) #"#b5b3ac" # dark beige
+
+  bg[NORMAL]        = @bg_color # "#ede9e3"
+  bg[PRELIGHT]      = shade (1.02, @bg_color) #"#f9f7f3" # very light beige
+  bg[SELECTED]	    = @selected_bg_color # "#5598d7" # deepsky
+  bg[INSENSITIVE]   = @bg_color # "#efebe5" # beige
+  bg[ACTIVE]        = shade (0.9, @bg_color) #"#dcd4c9" #"#d7d3ca" # dark beige
+
+  base[NORMAL]      = @base_color # "#ffffff" # white 
+  base[PRELIGHT]    = shade (0.95, @bg_color) # "#5f8ec4" # dark beige
+  base[ACTIVE]      = shade (0.9, @selected_bg_color) # "#a69f91" # darker deepsky
+  base[SELECTED]    = @selected_bg_color # "#5598d7" # deepsky
+  base[INSENSITIVE] = @bg_color # "#e8e5de" # beige
+
+  text[NORMAL]      = @text_color # "#000000" # black
+  text[PRELIGHT]    = @text_color # "#000000" # black
+  text[ACTIVE]      = @selected_fg_color # "#ffffff" # white
+  text[SELECTED]    = @selected_fg_color # "#ffffff" # white
+  text[INSENSITIVE] = darker (@bg_color) # "#b5b3ac" # dark beige
+
+  engine "clearlooks" 
+  {
+    scrollbar_color   = "#707070"
+    colorize_scrollbar = TRUE
+    menubarstyle      = 0       # 0 = flat, 1 = sunken, 2 = flat gradient
+    toolbarstyle = 0 # 0 = flat
+    animation         = FALSE
+	style             = GUMMY
+
+	# Set a hint to disable backward compatibility fallbacks.
+	hint = "use-hints"
+	#style             = CLASSIC
+    #radius            = 2.0
+  }
+}
+
+
+
+style "clearlooks-strict" 
+{
+  xthickness = 0
+  ythickness = 0
+  # bg[NORMAL]   = "#ff0000"
+ #	engine "clearlooks"
+#	{
+#		hint	= "comboboxentry"
+#	}
+}
+style "clearlooks-strict2" 
+{
+  xthickness = 2
+  ythickness = 2
+  # bg[NORMAL]   = "#ff0000"
+ #	engine "clearlooks"
+#	{
+#		hint	= "comboboxentry"
+#	}
+}
+style "clearlooks-wide" = "clearlooks-default"
+{
+  xthickness = 1
+  ythickness = 1
+}
+
+style "clearlooks-wider" = "clearlooks-default"
+{
+  xthickness = 3
+  ythickness = 3
+  GtkButton::inner-border      = {0, 0, 0, 0}
+  GtkEntry	 ::inner-border	     = { 1, 1, 1, 1 }
+}
+
+style "clearlooks-button" = "clearlooks-default"
+{
+  xthickness = 3
+  ythickness = 3
+  bg[NORMAL]        = shade (1.05, @bg_color) # "#f6f4f1"
+  bg[INSENSITIVE]   = shade (1.04, @bg_color) # "#f2efeb"
+  bg[PRELIGHT]      = shade (1.08, @bg_color) # "#faf9f8"
+}
+
+
+
+style "clearlooks-notebook" = "clearlooks-default"
+{
+#  bg[NORMAL]      = "#efebe5"
+#  bg[INSENSITIVE] = "#efebe5"
+  GtkWidget::focus-line-width=0
+}
+
+style "clearlooks-tasklist" = "clearlooks-default"
+{
+  xthickness = 5
+  ythickness = 3
+}
+
+style "clearlooks-menu" = "clearlooks-default"
+{
+  xthickness = 0
+  ythickness = 0
+  bg[NORMAL] = shade (1.08, @bg_color) # "#f9f7f3"
+}
+
+style "clearlooks-menubar-item" = "clearlooks-button"
+{
+#    fg[PRELIGHT] = "#000000"
+}
+
+style "clearlooks-menu-item" = "clearlooks-default"
+{
+  xthickness = 0
+  ythickness = 3
+  fg[PRELIGHT] = @selected_fg_color
+  text[PRELIGHT] = @selected_fg_color
+}
+
+
+style "clearlooks-treeview"= "clearlooks-default"
+{
+	engine "clearlooks" {
+		hint = "treeview"
+	}
+}
+
+# Based on the default style so that the colors from the button
+# style are overriden again.
+style "clearlooks-treeview-header" = "clearlooks-default"
+{
+	#xthickness = 2
+	#ythickness = 1
+
+	engine "clearlooks" {
+		hint = "treeview-header"
+	}
+}
+
+style "clearlooks-frame-title" = "clearlooks-default"
+{
+  fg[NORMAL] = lighter (@fg_color) # "#404040"
+}
+
+style "clearlooks-progressbar" = "clearlooks-wide"
+{
+  xthickness = 1
+  ythickness = 1
+  fg[PRELIGHT]  = @selected_fg_color
+
+	engine "clearlooks"
+	{
+		# Explicitly set the radius, for progress
+		# bars inside menuitems
+		radius = 3.0
+
+		hint	= "progressbar"
+	}
+}
+
+style "clearlooks-combo" = "clearlooks-wider"
+{
+  #GtkCombo::arrow-size = 5
+  #xthickness = 3 #more compact but needs patch
+  #ythickness = 3 #more compact but needs patch
+  #GtkButton::interior-focus = 0
+  #GtkButton::focus-padding = 0
+  #GtkButton::focus-line-width = 0
+  #GtkButton::focus-line-height = 0
+  
+  GtkButton::inner-border      = {0, 0, 0, 0}
+  GtkEntry	 ::inner-border	     = { 1, 1, 1, 1 }
+GtkButton::default_border    = { 0, 0, 0, 0 }	
+  	engine "clearlooks"
+	{
+		hint	= "comboboxentry"
+	}
+}
+
+style "clearlooks-menubar" 
+{
+#  bg[NORMAL]   = "#bacedb"
+	engine "clearlooks"
+	{
+		hint	= "menubar"
+	}
+}
+
+style "clearlooks-scale" = "clearooks-button"
+{
+	GtkRange::trough-side-details = 1
+	xthickness = 3 #more compact but needs patch
+	ythickness = 3 #more compact but needs patch
+	engine "clearlooks"
+	{
+		hint	= "scale"
+	}
+}	
+
+style "clearlooks-hscale"
+{
+	engine "clearlooks"
+	{
+		hint	= "hscale"
+	}
+}
+
+style "clearlooks-vscale"
+{
+	engine "clearlooks"
+	{
+		hint	= "vscale"
+	}
+}
+
+style "clearlooks-scrollbar"
+{
+	engine "clearlooks"
+	{
+		hint	= "scrollbar"
+	}
+}
+
+style "clearlooks-hscrollbar"
+{
+	engine "clearlooks"
+	{
+		hint	= "hscrollbar"
+	}
+}
+
+style "clearlooks-spinbutton"
+{
+	engine "clearlooks"
+	{
+		hint	= "spinbutton"
+	}
+}
+
+style "clearlooks-vscrollbar"
+{
+	engine "clearlooks"
+	{
+		hint	= "vscrollbar"
+	}
+}
+
+style "clearlooks-statusbar"
+{
+	engine "clearlooks"
+	{
+		hint	= "statusbar"
+	}
+}
+
+style "clearlooks-cell" = "clearlooks-tree"
+{
+  GtkCellRenderer::height=12
+  xthickness = 1
+  ythickness = 0
+  GtkEntry ::inner-border	     = { 0, 0, 0, 0 }
+  bg[NORMAL]   = "#00ff00"
+  text[NORMAL]   = "#00ff00"
+}
+
+style "clearlooks-optionmenu" = "clearlooks-combo"
+{
+#  bg[NORMAL]   = "#bacedb"
+#GtkOptionMenu::indicator-size=0
+  xthickness = 0
+  ythickness = 0
+  GtkMenu::horizontal-offset=0
+  GtkMenu::horizontal-padding=0
+  GtkMenu::vertical-offset=0
+  GtkMenu::vertical-padding=0
+  
+##  bg[NORMAL]   = "#ff0000"
+}
+
+style "clearlooks-separator-menu-item"
+{
+	GtkSeparatorMenuItem::horizontal-padding = 0
+	# We are setting the desired height by using wide-separators
+	# There is no other way to get the odd height ...
+	GtkWidget::wide-separators = 1
+	GtkWidget::separator-width = 1
+	GtkWidget::separator-height = 5
+	xthickness = 1
+	ythickness = 0
+}
+
+style  "clearlooks-tooltips"
+{                                                                                                                                                              
+        xthickness = 4
+        ythickness = 4
+
+        bg[NORMAL] = @tooltip_bg_color
+        fg[NORMAL] = @tooltip_fg_color
+}
+
+style "clearlooks-nautilus-location"
+{
+        bg[NORMAL] = mix(0.60, shade (1.05,@bg_color), @selected_bg_color)
+}
+
+style "clearlooks-test"
+{
+  bg[NORMAL]   = "#ff0000"
+}
+
+style "nautilus-location" {
+  bg[NORMAL] = mix(0.60, shade (1.05,@bg_color), @selected_bg_color)
+}
+widget "*.nautilus-extra-view-widget" style:highest "nautilus-location"
+
+#########################################
+# Matches
+#########################################
+
+# Clearlooks default style is applied to every widget
+class "GtkWidget"    style "clearlooks-default"
+
+# Increase the x/ythickness in some widgets
+class "GtkToolbar"   style "clearlooks-default" 
+class "GtkRange"     style "clearlooks-wide"
+class "GtkFrame"     style "clearlooks-wide"
+class "GtkSeparator" style "clearlooks-wide"
+class "GtkEntry"     style "clearlooks-wider"
+
+class "GtkSpinButton"  style "clearlooks-spinbutton"
+class "GtkScale"       style "clearlooks-scale"
+class "GtkVScale"      style "clearlooks-vscale"
+class "GtkHScale"      style "clearlooks-hscale"
+class "GtkScrollbar"   style "clearlooks-scrollbar"
+class "GtkVScrollbar"  style "clearlooks-vscrollbar"
+class "GtkHScrollbar"  style "clearlooks-hscrollbar"
+class "GtkScrolledWindow" style "clearlooks-wide"
+class "GtkOptionMenu" style "clearlooks-optionmenu"
+
+# General matching following, the order is choosen so that the right styles override each other
+# eg. progressbar needs to be more important then the menu match.
+
+widget_class "*<GtkButton>"      style "clearlooks-button"
+widget_class "*<GtkNotebook>"    style "clearlooks-notebook"
+widget_class "*.GtkNotebook.*.GtkEventBox" style "clearlooks-notebook"
+widget_class "*.GtkNotebook.*.GtkViewport" style "clearlooks-notebook"
+
+widget_class "*<GtkStatusbar>*"  style "clearlooks-statusbar"
+widget_class "*<GtkProgressBar>" style "clearlooks-progressbar"
+
+widget_class "*GtkComboBox*" style "clearlooks-strict"
+#widget_class "*<GtkComboBox>.<GtkFrame>*"  style "clearlooks-strict"
+
+widget_class "*<GtkComboBoxEntry>*" style "clearlooks-combo"
+widget_class "*<GtkCombo>*"         style "clearlooks-combo"
+#widget "*.gtk-combobox-popup-menu.*" style "clearlooks-menubar-item"
+
+widget_class "*<GtkMenuBar>*"           style "clearlooks-menubar"
+widget_class "*<GtkMenu>*"              style "clearlooks-menu"
+widget_class "*<GtkMenuItem>*"          style "clearlooks-menu-item"
+widget_class "*<GtkSeparatorMenuItem>*" style "clearlooks-separator-menu-item"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "clearlooks-frame-title"
+
+widget_class "*.<GtkTreeView>*"        style "clearlooks-treeview"
+
+# Treeview header
+widget_class "*.<GtkTreeView>.<GtkButton>" style "clearlooks-treeview-header"
+widget_class "*.<GtkCTree>.<GtkButton>"    style "clearlooks-treeview-header"
+widget_class "*.<GtkList>.<GtkButton>"     style "clearlooks-treeview-header"
+widget_class "*.<GtkCList>.<GtkButton>"    style "clearlooks-treeview-header"
+
+#ScrolledWindow
+#class "GtkScrolledWindow" style "clearlooks-wider"
+widget_class "*<GtkScrolledWindow>"      style "clearlooks-wide"
+
+#OptionMenu stuff
+widget_class "*GtkOptionMenu*" style "clearlooks-optionmenu"
+
+# The window of the tooltip is called "gtk-tooltip"
+################################
+# FIXME:
+# This will not work if one embeds eg. a button into the tooltip.
+# As far as I can tell right now we will need to rework the theme
+# quite a bit to get this working correctly.
+# (It will involve setting different priorities, etc.)
+################################
+widget "gtk-tooltip*" style "clearlooks-tooltips"
+
+
+
+###################################################
+# Special cases and work arounds
+###################################################
+
+# Special case the nautilus-extra-view-widget
+# ToDo: A more generic approach for all applications that have a widget like this.
+widget "*.nautilus-extra-view-widget" style : highest "clearlooks-nautilus-location"
+
+# Work around for http://bugzilla.gnome.org/show_bug.cgi?id=382646
+# Note that the work around assumes that the combobox is _not_ in
+# appears-as-list mode.
+# Similar hack also in the menuitem style.
+# This style does not affect GtkComboBoxEntry, it does have an effect
+# on comboboxes in appears-as-list mode though.
+style "clearlooks-combobox-text-color-workaround"
+{
+	text[NORMAL]      = @fg_color
+	text[PRELIGHT]    = @fg_color
+	text[SELECTED]    = @selected_fg_color
+	text[ACTIVE]      = @fg_color
+	text[INSENSITIVE] = darker (@bg_color)
+}
+widget_class "*.<GtkComboBox>.<GtkCellView>"   style "clearlooks-combobox-text-color-workaround"
+
+
+# Work around the evolution "New" button bug by making the toolbar flat.
+# http://bugzilla.gnome.org/show_bug.cgi?id=446953
+# Maybe remove this workaround in unstable releases.
+style "clearlooks-evo-new-button-workaround"
+{
+	engine "clearlooks"
+	{
+		toolbarstyle = 0
+	}
+}
+widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem*" style "clearlooks-evo-new-button-workaround"
+
+widget_class "*<GtkComboBoxText>*GtkEntry" style "clearlooks-strict2"

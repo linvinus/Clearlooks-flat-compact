@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gnome/clearlooks-flat-compact">
+    <file>gtk-main.css</file>
+    <file>gtk-widgets.css</file>
+    <file>gtk-widgets-small.css</file>
+    <file>nautilus.css</file>
+  </gresource>
+</gresources>
+
+  
