@@ -107,6 +107,7 @@ GtkComboBoxText .button:insensitive
 	                  shade(@theme_bg_color, 1.05) 100%);
     margin:0;
     border-width: 1px 1px 0px 1px;
+    border-color: shade(@theme_bg_color, 0.57);
     background-color: shade(@theme_bg_color, 1.05);
 
     
@@ -117,11 +118,13 @@ GtkComboBoxText .button:insensitive
 	-GtkWidget-focus-line-width : 0px;
     margin:0;
     border-width: 1px 1px 0 1px;
+    border-color: shade(@theme_bg_color, 0.57);
 }
 
 .notebook tab.right:active {
     padding: 2px 3px 2px 0px;
     border-width: 1px 1px 1px 0;
+    border-color: shade(@theme_bg_color, 0.57);
 	background-image: linear-gradient(to left,
 				  @selected_bg_color 1px,
 				  @selected_bg_color 3px,
@@ -133,11 +136,13 @@ GtkComboBoxText .button:insensitive
 .notebook tab.right {
     padding: 2px 3px 2px 0px;
     border-width: 1px 1px 1px 0;
+    border-color: shade(@theme_bg_color, 0.57);
 }
 
 .notebook tab.bottom:active {
     padding: 0px 2px 2px 2px;
     border-width: 0 1px 1px 1px;
+    border-color: shade(@theme_bg_color, 0.57);
 	background-image: linear-gradient(to top,
 				  @selected_bg_color 1px,
 				  @selected_bg_color 3px,
@@ -149,11 +154,13 @@ GtkComboBoxText .button:insensitive
 .notebook tab.bottom {
     padding: 0px 2px 2px 2px;
     border-width: 0 1px 1px 1px;
+    border-color: shade(@theme_bg_color, 0.57);
 }
 
 .notebook tab.left:active {
     padding: 2px 0px 2px 3px;
     border-width: 1px 0 1px 1px;
+    border-color: shade(@theme_bg_color, 0.57);
 	background-image: linear-gradient(to right,
 				  @selected_bg_color 1px,
 				  @selected_bg_color 3px,
@@ -165,6 +172,7 @@ GtkComboBoxText .button:insensitive
 .notebook tab.left {
     padding: 2px 0px 2px 3px;
     border-width: 1px 0 1px 1px;
+    border-color: shade(@theme_bg_color, 0.57);
 }
 
 .notebook tab .button {
@@ -173,10 +181,16 @@ GtkComboBoxText .button:insensitive
 
 .notebook tab{
 	background-color: shade(@theme_bg_color, 0.9);
+	border-color: shade(@theme_bg_color, 0.57);
+}
+
+.notebook tab:active{
+	background-color: shade(@theme_bg_color, 1.05);
+	border-color: shade(@theme_bg_color, 0.57);
 }
 .notebook:active{
 	background-color: shade(@theme_bg_color, 1.05);
-	border-color:transparent;
+	border-color: shade(@theme_bg_color, 0.57);
 }
 
 .check,
