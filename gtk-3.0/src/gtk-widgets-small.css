@@ -46,6 +46,17 @@ GtkStatusbar
     -GtkWidget-focus-line-width: 0;
     padding: 1px;
 }
+
+/*button press*/
+.button:active:hover
+{
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_bg_color, 0.85), 1.05)),
+                                     to (shade(shade(@theme_bg_color, 0.85), 0.97)));
+	border-width: 1px;
+	border-color: shade(@theme_bg_color, 0.57);
+}
+
 .entry  {
 	border-width: 1px;
     border-radius: 3px;
@@ -508,6 +519,20 @@ GtkComboBox .menu,
 
 }
 
+.dock
+{
+	padding: 10px;
+	margin: 2px;
+	border-width: 3px;
+	background-color: @theme_bg_color;
+
+	border-color: shade(@theme_bg_color, 0.57);
+	color: shade(@theme_bg_color, 0.57);
+ 
+	box-shadow: 0 -1px shade(@theme_bg_color, 0.57);
+}
+
+
 /***************************applications*******************************/
 
 /*GtkPathBar in GtkFileChooserDialog*/
@@ -731,11 +756,6 @@ GtkWindow>GtkVBox>GtkNotebook>GtkScrolledWindow>GtkViewport
 
 /**********************************************************************/
 
-.dock{
-	padding: 1px;
-	border-width: 1px;
-	background-color: shade(@theme_bg_color, 0.90);
-}
 
 
 
