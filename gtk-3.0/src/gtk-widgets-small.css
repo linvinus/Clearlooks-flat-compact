@@ -523,7 +523,7 @@ GtkComboBox .menu,
 .menu.button:insensitive,
 .menu.button {
 	background-image:none;
-	background-color: shade (@bg_color,1.08);
+	background-color: shade (@theme_bg_color,1.08);
 }
 
 .toolbar {
@@ -662,18 +662,18 @@ EMsgComposer GtkHTML {
 /* Properly select text in HTML message */
 EMailView GtkHTML:selected {
     color: @selcted_fg_color;
-    background-color: @selected_bg_color;
+    background-color: @theme_selected_bg_color;
 }
 
 EMsgComposer GtkHTML:selected {
     color: @selected_fg_color;
-    background-color: @selected_bg_color;
+    background-color: @theme_selected_bg_color;
 }
 
 /* Highlight selected message in message list when list is unfocused */
 EMailReader MessageList ECanvas:active {
     color: @selected_fg_color;
-    background-color: @selected_bg_color;
+    background-color: @theme_selected_bg_color;
 }
 
 
@@ -800,90 +800,6 @@ GeditFloatingSlider{
 }
 /**********************************************************************/
 
-
-
-
-/*.content-view baobab main window bg*/
-/*EggListBox,
-GtkTreeView .frame
-* GtkViewport,
-*/
-/*
-GtkGrid,
-*/
-/*
-GtkBox,
-* GtkAspectFrame
-GtkScrolledWindow,
-*/
-
-GtkScrolledWindow.frame
-{
-/*
-	background-color: #FF0F00;
-*/
-	background-color:shade(@theme_bg_color, 0.57);
-/*
-	color: #FFF000;
-*/
-/*
-	border-color: #00FF00;
-*/
-	border-width: 1px;
-	padding: 1px;
-	margin: 1px;
-	border-style: solid;
-/*
-	-GtkScrolledWindow-scrollbar-spacing:1;
-*/
-	
-}
-/* avoid double borders when a viewport is
- * packed into a GtkScrolledWindow */
-/*
- * disabled for gnome-calculator
-GtkScrolledWindow GtkViewport.frame {
-    border-style: none;
-}
-*/
-/*
-GtkTreeView,
-GtkTreeView.frame{
-padding: 3px;
-margin: 3px;
--GtkTreeView-spacing:3;
-}
-*/
-
-
-/*Chart,
-GtkNotebook*/
-/*
-BaobabRingschart
-{
-	background-color: @theme_base_color;
-	border-color: #00FF00;
-	border-width: 1px;
-	padding: 1px;
-	border-style: solid;
-}
-*/
-
-/*
-GtkNotebook,
-GtkVBox,
-GtkHBox,
-GtkBox,
-GtkScrolledWindow,
-GtkScrolledWindow.frame,
-GtkGrid{
-	margin: 1px;
-	padding: 1px;
-	border-width: 1px;	
-	border-color: shade(@theme_bg_color, 0.57);
-    border-style: solid;
-}
-*/
 
 
 

@@ -1861,7 +1861,6 @@ GtkTreeView row:nth-child(odd) {
  * viewport *
  ************/
 GtkViewport {
-    background-color: transparent;
 }
 
 GtkViewport.frame {
