@@ -47,14 +47,51 @@ GtkStatusbar
     padding: 1px;
 }
 
+.button.default,
+.button.default:focus,
+.button.default:selected,
+.button.default:selected:focus
+{
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color,1.5), 1.05)),
+                                     to (shade(shade(@theme_selected_bg_color,1.5), 0.97)) );
+
+    border-radius: 3px;
+	border-color: shade(@theme_bg_color, 0.17);
+    border-style: solid;
+/*
+    color: shade(@theme_bg_color, 0.57);
+*/
+}
+
 /*button press*/
-.button:active:hover
+.button:active:hover,
+.primary-toolbar .button:active:hover,
+.toolbar .button:active:hover,
+.inline-toolbar.toolbar .button:active:hover
 {
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_bg_color, 0.85), 1.05)),
                                      to (shade(shade(@theme_bg_color, 0.85), 0.97)));
 	border-width: 1px;
 	border-color: shade(@theme_bg_color, 0.57);
+}
+
+.button.default:hover,
+.button.default:selected:hover
+{
+	border-color: shade(@theme_bg_color, 0.17);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color,1.6), 1.05)),
+                                     to (shade(shade(@theme_selected_bg_color,1.6), 0.97)) );	
+}
+.button.default:active:hover,
+.button.default:active:selected:hover
+{
+	border-color: shade(@theme_bg_color, 0.17);
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(shade(@theme_selected_bg_color,1.8), 1.05)),
+                                     to (shade(shade(@theme_selected_bg_color,1.8), 0.97)) );	
 }
 
 .entry  {
@@ -754,6 +791,13 @@ GtkWindow>GtkVBox>GtkNotebook>GtkScrolledWindow>GtkViewport
 	background-color: @theme_base_color;
 }
 
+GeditFloatingSlider{
+/*
+	hardcoded =(
+	background-color: @theme_base_color
+*/
+	color: shade(@theme_bg_color, 0.57);
+}
 /**********************************************************************/
 
 
@@ -840,5 +884,6 @@ GtkGrid{
     border-style: solid;
 }
 */
+
 
 
