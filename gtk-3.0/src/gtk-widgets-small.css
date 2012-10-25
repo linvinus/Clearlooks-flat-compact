@@ -93,13 +93,14 @@ GtkStatusbar
                                      from (shade(shade(@theme_selected_bg_color,1.8), 1.05)),
                                      to (shade(shade(@theme_selected_bg_color,1.8), 0.97)) );	
 }
-
+/*also background in evolution mail preview*/
 .entry  {
 	border-width: 1px;
     border-radius: 3px;
     border-style: solid;
     padding: 2px 2px 2px 2px;
     margin:0;
+    background-color: @theme_base_color;
 }
 
  /******************
@@ -643,39 +644,6 @@ GtkComboBox .menu,
     border-color: shade(@theme_bg_color, 0.57);
 }
 
-/*evolution message list*/
-EMailReader MessageList ECanvas{
-    color: #000000;
-    background-color: @theme_base_color;
-}
-/* Black on white for HTML messages in Evolution Reader/Composer */
-/*evolution 3.6*/
-WebKitWebView {
-    color: #000000;
-    background-color: @theme_base_color;
-}
-/*evolution 3.4*/
-EMsgComposer GtkHTML {
-    color: #000000;
-    background-color:@theme_base_color;
-}
-/* Properly select text in HTML message */
-EMailView GtkHTML:selected {
-    color: @selcted_fg_color;
-    background-color: @theme_selected_bg_color;
-}
-
-EMsgComposer GtkHTML:selected {
-    color: @selected_fg_color;
-    background-color: @theme_selected_bg_color;
-}
-
-/* Highlight selected message in message list when list is unfocused */
-EMailReader MessageList ECanvas:active {
-    color: @selected_fg_color;
-    background-color: @theme_selected_bg_color;
-}
-
 
 /*nautilus,remmina*/
 GtkStatusbar{	
@@ -785,6 +753,7 @@ NautilusWindow * {
 
 /* ugly but works for gnome-control-center
    see https://bugzilla.gnome.org/show_bug.cgi?id=591085
+   think this is better than set background-color for GtkViewport globally
 */
 GtkWindow>GtkVBox>GtkNotebook>GtkScrolledWindow>GtkViewport
 {
@@ -799,6 +768,7 @@ GeditFloatingSlider{
 	color: shade(@theme_bg_color, 0.57);
 }
 /**********************************************************************/
+
 
 
 

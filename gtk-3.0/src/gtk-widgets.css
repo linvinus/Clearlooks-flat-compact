@@ -1860,7 +1860,7 @@ GtkTreeView row:nth-child(odd) {
 /************
  * viewport *
  ************/
-GtkViewport {
+GtkViewport{
 }
 
 GtkViewport.frame {
