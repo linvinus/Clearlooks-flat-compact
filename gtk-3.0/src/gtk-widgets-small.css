@@ -769,7 +769,16 @@ GeditFloatingSlider{
 }
 /**********************************************************************/
 
-
-
-
-
+/*animation*/
+.button,
+.check,
+.menuitem,
+.radio
+ {
+/*
+  in gtk 3.6.0-0ubuntu3, color have artifacts
+  transition-property: color, background-color, background-image;
+*/
+  transition-property: background-color, background-image;
+  transition-duration: 0.2s;
+}
