@@ -579,11 +579,11 @@ GtkComboBox .menu,
 	box-shadow: 0 -1px shade(@theme_bg_color, 0.57);
 }
 
-GtkProgressBar.progressbar{
+.progressbar {
 	color: @theme_base_color;/* font color after the progress bar covers the text */
 }
 
-GtkProgressBar.trough {
+.trough {
 	color: @theme_fg_color;/* font color before the progress bar covers the text */
 }
 
