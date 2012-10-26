@@ -1813,6 +1813,7 @@ GtkTextView {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
     border-right-width: 1px;
     border-left-width: 1px;
+    border-radius: 3px;
 }
 
 /***********
