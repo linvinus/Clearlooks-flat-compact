@@ -25,7 +25,7 @@
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkMenu-horizontal-padding: 0;
-    -GtkMenu-vertical-padding: 0;  
+    -GtkMenu-vertical-padding: 0;
     -GtkMenuBar-internal-padding: 0;
     -GtkMenuItem-arrow-scaling: 0.4;
     -GtkNotebook-initial-gap: 0;
@@ -71,7 +71,7 @@
 	-GtkCheckButton-indicator-size:13;
 	-GtkRadioButton-indicator-spacing:1;
 	-GtkCheckMenuItem-indicator-size:13;
-	
+
 	-GtkButtonBox-child-min-height:18;
 	-GtkButtonBox-child-min-width:18;
     -GtkButton-child-displacement-x: 0;
@@ -95,7 +95,7 @@
     -GtkTreeView-allow-rules: 1;
 
    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;    
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
 }
 /*end of small size*/
 
@@ -114,7 +114,7 @@ GtkWindow {
  **********/
 *:insensitive {
     color: mix(@theme_fg_color, @theme_bg_color, 0.4);
-    text-shadow: 1px 1px alpha(@light_shadow, 0.4);
+    text-shadow: 1 1 alpha(@light_shadow, 0.4);
 }
 
 *:active {
@@ -144,44 +144,44 @@ GtkWindow {
  ******************/
 .button,
 GtkSwitch.slider {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.4),
-                inset -1px 0 alpha(@light_shadow, 0.4);
+    box-shadow: inset 1 1 alpha(@light_shadow, 0.4),
+                inset -1 0 alpha(@light_shadow, 0.4);
 }
 
 .button:insensitive,
 GtkSwitch.slider:insensitive {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
-                inset -1px 0 alpha(@light_shadow, 0.2);
+    box-shadow: inset 1 1 alpha(@light_shadow, 0.2),
+                inset -1 0 alpha(@light_shadow, 0.2);
 }
 .button.default {
-    box-shadow: inset 1px 1px alpha(@light_shadow, 0.2),
-                inset -1px 0 alpha(@light_shadow, 0.2);
+    box-shadow: inset 1 1 alpha(@light_shadow, 0.2),
+                inset -1 0 alpha(@light_shadow, 0.2);
 }
 
 .button:active,
 .primary-toolbar .button:active {
-    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.06),
-                inset -1px -1px alpha(@dark_shadow, 0.06);
+    box-shadow: inset 1 1 alpha(@dark_shadow, 0.06),
+                inset -1 -1 alpha(@dark_shadow, 0.06);
 }
 
 .button:focus,
 .button:hover:focus,
 .button:active:focus {
-    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 1px alpha(@theme_selected_bg_color, 0.4),
-                inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 -1px alpha(@theme_selected_bg_color, 0.4);
+    box-shadow: inset 1 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 1 alpha(@theme_selected_bg_color, 0.4),
+                inset -1 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 -1 alpha(@theme_selected_bg_color, 0.4);
 }
 
 .entry {
-    box-shadow: inset 1px 1px alpha(@dark_shadow, 0.1);
+    box-shadow: inset 1 1 alpha(@dark_shadow, 0.1);
 }
 
 .entry:focus {
-    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 1px alpha(@theme_selected_bg_color, 0.4),
-                inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
-                inset 0 -1px alpha(@theme_selected_bg_color, 0.4);
+    box-shadow: inset 1 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 1 alpha(@theme_selected_bg_color, 0.4),
+                inset -1 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 -1 alpha(@theme_selected_bg_color, 0.4);
 }
 
 /* draw borders using box shadow */
@@ -189,50 +189,50 @@ GtkSwitch.slider:insensitive {
 .toolbar .menu,
 .toolbar .primary-toolbar .menu,
 .menu {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 1px shade(@theme_bg_color, 0.8),
-                inset -1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 -1px shade(@theme_bg_color, 0.8);
+    box-shadow: inset 1 0 shade(@theme_bg_color, 0.8),
+                inset 0 1 shade(@theme_bg_color, 0.8),
+                inset -1 0 shade(@theme_bg_color, 0.8),
+                inset 0 -1 shade(@theme_bg_color, 0.8);
 }
 
 GtkScale.slider {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.7),
-                inset 0 1px shade(@theme_bg_color, 0.7),
-                inset -1px 0 shade(@theme_bg_color, 0.6),
-                inset 0 -1px shade(@theme_bg_color, 0.6);
+    box-shadow: inset 1 0 shade(@theme_bg_color, 0.7),
+                inset 0 1 shade(@theme_bg_color, 0.7),
+                inset -1 0 shade(@theme_bg_color, 0.6),
+                inset 0 -1 shade(@theme_bg_color, 0.6);
 }
 
 GtkScale.slider:hover {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.5),
-                inset 0 1px shade(@theme_bg_color, 0.5),
-                inset -1px 0 shade(@theme_bg_color, 0.5),
-                inset 0 -1px shade(@theme_bg_color, 0.5);
+    box-shadow: inset 1 0 shade(@theme_bg_color, 0.5),
+                inset 0 1 shade(@theme_bg_color, 0.5),
+                inset -1 0 shade(@theme_bg_color, 0.5),
+                inset 0 -1 shade(@theme_bg_color, 0.5);
 }
 
 GtkScale.trough {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.7),
-                inset 0 1px shade(@theme_bg_color, 0.7),
-                inset -1px 0 shade(@theme_bg_color, 0.7),
-                inset 0 -1px shade(@theme_bg_color, 0.7);
+    box-shadow: inset 1 0 shade(@theme_bg_color, 0.7),
+                inset 0 1 shade(@theme_bg_color, 0.7),
+                inset -1 0 shade(@theme_bg_color, 0.7),
+                inset 0 -1 shade(@theme_bg_color, 0.7);
 }
 
 .menubar .menuitem .scale.highlight.left,
 .scale.highlight.left,
 .scale.highlight.bottom {
-    box-shadow: inset 1px 0 shade(@theme_selected_bg_color, 0.7),
-                inset 0 1px shade(@theme_selected_bg_color, 0.7),
-                inset -1px 0 shade(@theme_selected_bg_color, 0.7),
-                inset 0 -1px shade(@theme_selected_bg_color, 0.7);
+    box-shadow: inset 1 0 shade(@theme_selected_bg_color, 0.7),
+                inset 0 1 shade(@theme_selected_bg_color, 0.7),
+                inset -1 0 shade(@theme_selected_bg_color, 0.7),
+                inset 0 -1 shade(@theme_selected_bg_color, 0.7);
 }
 
 GtkScale.slider:insensitive,
 GtkScale.trough:insensitive,
 .scale.highlight.left:insensitive,
 .scale.highlight.bottom:insensitive {
-    box-shadow: inset 1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 1px shade(@theme_bg_color, 0.8),
-                inset -1px 0 shade(@theme_bg_color, 0.8),
-                inset 0 -1px shade(@theme_bg_color, 0.8);
+    box-shadow: inset 1 0 shade(@theme_bg_color, 0.8),
+                inset 0 1 shade(@theme_bg_color, 0.8),
+                inset -1 0 shade(@theme_bg_color, 0.8),
+                inset 0 -1 shade(@theme_bg_color, 0.8);
 }
 
 /* disable box shadow */
@@ -704,7 +704,7 @@ GtkImage:insensitive {
 GtkLabel,
 GtkLabel:active,
 GtkLabel:insensitive {
-    background-color: transparent;
+    background-color: @theme_bg_color;
 }
 
 /***********
@@ -862,7 +862,7 @@ GtkLabel:insensitive {
 }
 
 .grip {
-    background-color: transparent;
+    background-color: @theme_bg_color;
 }
 
 /********
@@ -1813,6 +1813,7 @@ GtkTextView {
 .inline-toolbar.toolbar GtkToolButton:only-child .button:insensitive {
     border-right-width: 1px;
     border-left-width: 1px;
+    border-radius: 3px;
 }
 
 /***********
@@ -1828,7 +1829,7 @@ GtkTextView {
 }
 
 .tooltip * {
-    background-color: transparent;
+    background-color: @theme_bg_color;
 }
 
 /************
