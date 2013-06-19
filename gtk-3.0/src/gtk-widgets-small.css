@@ -26,7 +26,7 @@
 .trough row:hover,
 .trough row:selected,
 .trough row:selected:focus,
-.pane-separator, 
+.pane-separator,
 .separator,
 .primary-toolbar GtkSeparatorToolItem,
 .primary-toolbar .separator,
@@ -38,7 +38,7 @@ GtkStatusbar
 	border-width: 1px;
 	border-color: shade(@theme_bg_color, 0.57);
 }
- 
+
 .button,
 .button.default {
 	border-width: 1px;
@@ -92,7 +92,7 @@ GtkStatusbar
 	border-color: shade(@theme_bg_color, 0.17);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_selected_bg_color,1.6), 1.05)),
-                                     to (shade(shade(@theme_selected_bg_color,1.6), 0.97)) );	
+                                     to (shade(shade(@theme_selected_bg_color,1.6), 0.97)) );
 }
 .button.default:active:hover,
 .button.default:active:selected:hover
@@ -100,7 +100,7 @@ GtkStatusbar
 	border-color: shade(@theme_bg_color, 0.17);
     background-image: -gtk-gradient(linear, left top, left bottom,
                                      from (shade(shade(@theme_selected_bg_color,1.8), 1.05)),
-                                     to (shade(shade(@theme_selected_bg_color,1.8), 0.97)) );	
+                                     to (shade(shade(@theme_selected_bg_color,1.8), 0.97)) );
 }
 /*also background in evolution mail preview*/
 .entry  {
@@ -168,7 +168,7 @@ GtkComboBoxText .button:insensitive
     border-color: shade(@theme_bg_color, 0.57);
     background-color: shade(@theme_bg_color, 1.05);
 
-    
+
 }
 
 .notebook tab.top {
@@ -188,7 +188,7 @@ GtkComboBoxText .button:insensitive
 				  @selected_bg_color 3px,
 				  shade(@selected_bg_color,0.5) 1px,
 				  shade(@theme_bg_color, 1.05) 1px,
-				  shade(@theme_bg_color, 1.05) 100%);   
+				  shade(@theme_bg_color, 1.05) 100%);
 }
 
 .notebook tab.right {
@@ -475,8 +475,8 @@ GtkViewport.frame
 .menuitem .check:insensitive,
 .menuitem.radio,
 .menuitem .radio,
-.menuitem.radio:active, 
-.menuitem .radio:active, 
+.menuitem.radio:active,
+.menuitem .radio:active,
 .menuitem.radio:hover,
 .menuitem .radio:hover,
 .menuitem.radio:selected,
@@ -510,7 +510,7 @@ GtkTreeView .radio:focus,
 GtkTreeView.radio:selected:focus,
 GtkTreeView .radio:selected:focus,
 GtkTreeView.radio:selected,
-GtkTreeView .radio:selected 
+GtkTreeView .radio:selected
 {
 	background-image:none;
 	color: @fg_color;
@@ -575,7 +575,7 @@ GtkComboBox .menu,
 
 	border-color: shade(@theme_bg_color, 0.57);
 	color: shade(@theme_bg_color, 0.57);
- 
+
 	box-shadow: 0 -1px shade(@theme_bg_color, 0.57);
 }
 
@@ -662,12 +662,12 @@ GtkComboBox .menu,
 
 
 /*nautilus,remmina*/
-GtkStatusbar{	
+GtkStatusbar{
 	-GtkStatusbar-shadow-type: in;
 }
 
 GtkStatusbar >.frame{
-	
+
 	border-width: 1px;
 	border-radius: 0;
 	border-color: 	shade(@theme_bg_color, 0.57);
@@ -695,7 +695,7 @@ PanelApplet
 	                  shade(@selected_bg_color,0.5) 2px,
 	                  shade(@theme_bg_color, 1.00) 2px,
 	                  shade(@theme_bg_color, 1.00) 95%,
-	                  shade(@theme_bg_color, 1.00));   
+	                  shade(@theme_bg_color, 1.00));
 */
 	/*border on bottom panel*/
 	 background-image: -gtk-gradient (linear, 0.0 0.0, 0.0 0.05,
@@ -756,7 +756,7 @@ WnckTasklist{
      color: @error_color;
 }
 */
-NautilusWindow GtkScrolledWindow .frame, 
+NautilusWindow GtkScrolledWindow .frame,
 NautilusWindow .sidebar .frame {
     border-width: 1px;
     border-style: solid;

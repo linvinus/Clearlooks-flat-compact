@@ -25,7 +25,7 @@
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
     -GtkMenu-horizontal-padding: 0;
-    -GtkMenu-vertical-padding: 0;  
+    -GtkMenu-vertical-padding: 0;
     -GtkMenuBar-internal-padding: 0;
     -GtkMenuItem-arrow-scaling: 0.4;
     -GtkNotebook-initial-gap: 0;
@@ -71,7 +71,7 @@
 	-GtkCheckButton-indicator-size:13;
 	-GtkRadioButton-indicator-spacing:1;
 	-GtkCheckMenuItem-indicator-size:13;
-	
+
 	-GtkButtonBox-child-min-height:18;
 	-GtkButtonBox-child-min-width:18;
     -GtkButton-child-displacement-x: 0;
@@ -95,7 +95,7 @@
     -GtkTreeView-allow-rules: 1;
 
    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;    
+    -GtkScrolledWindow-scrollbars-within-bevel: 1;
 }
 /*end of small size*/
 
@@ -945,6 +945,9 @@ GtkTreeMenu .menuitem * {
     border-style: solid;
     border-width: 1px;
     padding: 3px 2px 3px 2px;
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
 }
 
 .menu .menuitem:active,
@@ -1024,6 +1027,7 @@ GtkTreeMenu .menuitem * {
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     padding: 0;
+    background-clip: border-box;
 }
 
 .notebook tab {
@@ -1449,8 +1453,13 @@ GtkScrolledWindow.frame {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
 
+	background-image: linear-gradient(to bottom,
+	                  transparent,transparent 30%,
+	                  shade(@theme_bg_color, 0.57) 3px,
+	                  transparent 30%,transparent);
+
     color: @theme_bg_color;
-    border-color: @theme_bg_color;
+    border-width: 0px;
 }
 
 GtkComboBox .separator {
