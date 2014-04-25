@@ -279,6 +279,11 @@ row:selected:focus {
 .grip {
 	border-width: 1px;
     background-color: @theme_selected_bg_color;
+/*
+background-image: -gtk-gradient(linear, left top, right bottom,
+                                     from (transparent),
+                                     to (shade(shade(@theme_selected_bg_color,1.6), 0.1)) );
+*/
 }
 
 .scrollbar.slider,
@@ -798,3 +803,23 @@ GeditFloatingSlider{
   transition-property: background-color, background-image;
   transition-duration: 0.2s;
 }
+
+/*override graybird*/
+.notebook GtkViewport {
+    background-color: shade(@theme_bg_color, 1.05);
+}
+/*
+ -GtkWindow-decoration-button-layout: 'icon:minimize,maximize,close';
+*/
+
+/*******
+ * CSD *
+ *******/
+.titlebar {
+    background-image: linear-gradient(to bottom,
+                                      #828282,
+                                      #737373
+                                      );
+
+}
+
