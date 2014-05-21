@@ -336,18 +336,16 @@ background-image: -gtk-gradient(linear, left top, right bottom,
 
 
 
-/*
+
 GtkTreeView,
 GtkCTree,
 GtkList,
 GtkCList{
-    border-width: 1px 1px 1px 1px;
-    padding: 1px;
-    -GtkTreeView-grid-line-width:0;
-    -GtkTreeView-tree-line-width:0;
-    background-color: #FF0000;
+    -GtkTreeView-vertical-separator: 0;
+    -GtkWidget-focus-line-width: 0;
+    -GtkWidget-focus-padding: 0;    
 }
-*/
+
 GtkTreeView *,
 GtkCTree *,
 GtkList *,

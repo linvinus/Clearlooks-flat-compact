@@ -53,6 +53,43 @@
     outline-offset: 2px;
 }
 
+/*small size by default, specially for GtkTreeView row */
+* {
+	padding:0;
+	margin:0;
+	border-width: 0px;
+	-GtkCheckButton-indicator-spacing:1;
+	-GtkCheckButton-indicator-size:13;
+	-GtkRadioButton-indicator-spacing:1;
+	-GtkCheckMenuItem-indicator-size:13;
+
+	-GtkButtonBox-child-min-height:18;
+	-GtkButtonBox-child-min-width:18;
+	-GtkButton-child-displacement-x: 0;
+	-GtkButton-child-displacement-y: 0;
+	-GtkButton-default-border: 0;
+	-GtkButton-image-spacing: 0;
+	-GtkButton-inner-border: 0;
+	-GtkButton-interior-focus: true;
+
+	-GtkEntry-inner-border: 0;
+	-GtkEntry-progress-border: 0;
+	-GtkRange-stepper-size: 0;
+	-GtkRange-stepper-spacing: 0;
+	-GtkRange-trough-border: 0;
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+	-GtkToolbar-internal-padding: 0;
+	-GtkToolButton-icon-spacing: 0;
+	-GtkTreeView-vertical-separator: 0;
+	-GtkWidget-focus-line-width: 0;
+	-GtkWidget-focus-padding: 0;
+	-GtkTreeView-allow-rules: 1;
+
+	-GtkScrolledWindow-scrollbar-spacing: 0;
+	-GtkScrolledWindow-scrollbars-within-bevel: 1;
+}
+/*end of small size*/
+
 /***************
  * base states *
  ***************/
