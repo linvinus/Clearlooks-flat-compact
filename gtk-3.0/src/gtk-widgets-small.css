@@ -806,6 +806,42 @@ GeditFloatingSlider{
 .notebook GtkViewport {
     background-color: shade(@theme_bg_color, 1.05);
 }
+.notebook tab GtkLabel {
+    color: @theme_text_color;
+}
+
+.menuitem.separator {
+   color: shade(@theme_bg_color, 0.58);
+}
+.primary-toolbar .menu,
+.primary-toolbar .button .menu,
+.toolbar .menu,
+.toolbar .primary-toolbar .menu,
+.header-bar .menu,
+.header-bar .primary-toolbar .menu,
+.menu {
+   border-color: shade(@theme_bg_color, 0.58);
+}
+
+GtkCheckButton:prelight,
+GtkCheckButton:focused
+{
+    border-color: shade(@theme_bg_color, 0.97);
+    border-bottom-color: shade(@theme_bg_color, 0.9);
+    background-color: #FF0000;
+    background-image: linear-gradient(to bottom,
+                                      @theme_bg_color,
+                                      @theme_bg_color
+                                      );
+}
+GtkCheckButton.check:prelight,
+GtkCheckButton:focused
+{
+	background-color: transparent;
+	background-image:none;
+	border-color: shade(@theme_selected_bg_color, 0.8);
+}
+
 /*
  -GtkWindow-decoration-button-layout: 'icon:minimize,maximize,close';
 */
